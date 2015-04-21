@@ -1,12 +1,12 @@
 web:
   build: .
-  command: php -S 0.0.0.0:8000 -t /code
+  command: php -S 0.0.0.0:80 -t /code
   ports:
-    - "8000:8000"
+    - "80:80"
   links:
     - db
   volumes:
-    - .:/code
+    - wordpress:/code
 db:
   image: orchardup/mysql
   environment:
