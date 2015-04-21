@@ -11,3 +11,5 @@ db:
   image: orchardup/mysql
   environment:
     MYSQL_DATABASE: wordpress
+  volumes:
+    - db:/db
